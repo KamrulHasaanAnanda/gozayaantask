@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -13,13 +11,127 @@ body {
 }
 
 body {
-
   background: #430099;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+.main__class {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  h4 {
+    color: #fff;
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .graph__div {
+    margin-top: 34px;
+    display: flex;
+    height: 545px;
+    padding: 32px 135px;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: var(--neutral-white, #fff);
+    h5 {
+      color: var(--neutral-black, #1f1f23);
+      font-family: Roboto;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .tabs {
+      display: flex;
+      padding: 12px 32px;
+      align-items: center;
+      gap: 12px;
+      border-radius: 30px;
+      background: #f5f6fa;
+      p {
+        color: var(--Dark-grey, #373b47);
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .all__time {
+        display: flex;
+        padding: 8px 10px;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: white;
+        border-radius: 16px;
+        p {
+          color: var(--Blue, #003eff);
+        }
+      }
+    }
+  }
+
+  .pie__chart {
+    width: 264px;
+    height: 264px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    display: block;
+    margin: 10px;
+    position: relative;
+
+    .segment {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      clip-path: polygon(50% 50%, 0 0, 100% 0);
+  }
+
+  #part1 {
+      transform: rotate(0deg);
+      background-color: #E64C65;
+  }
+
+  #part2 {
+      transform: rotate(120deg);
+      background-color: #11A8AB;
+  }
+
+  #part3 {
+      transform: rotate(240deg);
+      background-color: #4FC4F6;
+  }
+    h3 {
+      color: #111;
+
+      font-family: Helvetica Neue;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
