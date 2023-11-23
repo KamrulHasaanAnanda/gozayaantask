@@ -93,13 +93,6 @@ a {
       align-items: center;
       justify-content: center;
 
-      // background: conic-gradient(
-      //   #141197 0% 25%,
-      //   #9d9bf4 25% 50%,
-      //   #4fd18b 50% 75%,
-      //   #4c49ed 75% 100%
-      // );
-
       .hole {
         width: 200px;
         height: 200px;
@@ -132,7 +125,7 @@ a {
     .colors {
       display: flex;
       align-items: center;
-      gap:22px;
+      gap: 22px;
       .inside__color {
         display: flex;
         align-items: center;
@@ -153,6 +146,60 @@ a {
         height: 13px;
         border-radius: 33px;
         background-color: #430099;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .graph__div {
+      width: 80%;
+      padding: 32px;
+    }
+  }
+  @media (max-width: 600px) {
+    .graph__div {
+      margin-top: 10px;
+      gap: 30px;
+      .donut {
+        width: 220px;
+        height: 220px;
+        .hole {
+          width: 170px;
+          height: 170px;
+        }
+      }
+      .tabs {
+        padding: 12px 20px;
+      }
+      .colors {
+        gap: 15px;
+        flex-wrap: wrap;
+        .inside__color {
+          min-width: 100px;
+        }
+        p {
+          font-size: 13px;
+        }
+        .color {
+          width: 25px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .graph__div{
+      padding: 12px 8px !important;
+    }
+    .tabs {
+      padding: 12px 8px !important;
+    }
+    .donut {
+      width: 200px !important;
+      height: 200px !important;
+      .hole {
+        width: 150px !important;
+        height: 150px !important;
       }
     }
   }
