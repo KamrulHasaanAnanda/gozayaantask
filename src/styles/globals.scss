@@ -95,9 +95,9 @@ a {
 
       background: conic-gradient(
         #141197 0% 25%,
-        #4c49ed 25% 50%,
+        #9d9bf4 25% 50%,
         #4fd18b 50% 75%,
-        #9d9bf4 75% 100%
+        #4c49ed 75% 100%
       );
 
       .hole {
@@ -126,6 +126,33 @@ a {
           font-weight: 800;
           line-height: normal;
         }
+      }
+    }
+
+    .colors {
+      display: flex;
+      align-items: center;
+      gap:22px;
+      .inside__color {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      p {
+        color: #938fa3;
+
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.32px;
+      }
+      .color {
+        width: 37px;
+        height: 13px;
+        border-radius: 33px;
+        background-color: #430099;
       }
     }
   }

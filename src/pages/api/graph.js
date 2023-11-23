@@ -32,9 +32,7 @@ let data = [
 ];
 export default async function handler(req, res) {
   try {
-    // const response = await fetch("./data.json");
-    // // const data = response.data;
-    // console.log("response", response);
+
     data.forEach((item) => {
       item.totalCost = item.personal + item.shopping + item.phone + item.other;
     });
