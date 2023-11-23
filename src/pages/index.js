@@ -57,21 +57,21 @@ export default function Home() {
             setTototalExpense={setTototalExpense}
             setGraphData={setGraphData}
           />
-          <div className="donut"
-           style={{
-            background: `conic-gradient(
-              #141197 0% 25%,
-              #9d9bf4 25% 50%,
-              #4fd18b 50% 75%,
-              #4c49ed 75% 100%
-            )`,
-          }}
+          <div
+            className="donut"
+            style={{
+              background: `conic-gradient(
+                #4c49ed 0% ${percentage(graphData?.personal, totalExpense)}%,
+                #9d9bf4 ${percentage(graphData?.personal, totalExpense)}% ${percentage(graphData?.personal + graphData?.shopping, totalExpense)}%,
+                #4fd18b ${percentage(graphData?.personal + graphData?.shopping, totalExpense)}% ${percentage(graphData?.personal + graphData?.shopping + graphData?.phone, totalExpense)}%,
+                #141197 ${percentage(graphData?.personal + graphData?.shopping + graphData?.phone, totalExpense)}% 100%
+              )`,
+            }}
           >
             <div className="hole">
               <h2>
                 ${totalExpense}.<span>00</span>
               </h2>
-          
             </div>
           </div>
 
