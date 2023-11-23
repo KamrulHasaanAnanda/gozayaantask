@@ -11,13 +11,10 @@ export default function Home() {
   const [graphData, setGraphData] = useState();
 
   let percentage = (value, total) => {
-    console.log(
-      "((value / total) * 100).toFixed(2)",
-      ((value / total) * 100).toFixed(2)
-    );
+
     return ((value / total) * 100).toFixed(2);
   };
-  console.log("graphData", graphData);
+  // console.log("graphData", graphData);
   let getData = async () => {
     let url = "/api/graph";
     let res = await axios.get(url);
