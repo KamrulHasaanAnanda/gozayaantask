@@ -1,17 +1,25 @@
+import Tabs from "@/components/Tabs";
 import axios from "axios";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
 export default function Home() {
-  let getData = async()=>{
-    let url = "/api/graph"
-    let res = await axios.get(url)
-    console.log('res', res)
-  }
+
+  const [data, setdata] = useState()
+  const [tabNow, setTabNow] = useState("ALL TIME")
+  let getData = async () => {
+    let url = "/api/graph";
+    let res = await axios.get(url);
+    console.log("res", res);
+    if(res.status === 200){
+      setdata(res.data)
+    }
+  };
 
   useEffect(() => {
     getData();
-  }, [])
-  
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,13 +32,13 @@ export default function Home() {
         <h4>Expense Chart</h4>
         <div className="graph__div">
           <h5>Expenses</h5>
-          <div className="tabs">
-            <p>1M</p>
-            <p>6M</p>
-            <p>1Y</p>
-            <div className="all__time">
-              <p>All Time</p>
-            </div>
+          <Tabs data={data} setTabNow={setTabNow} tabNow={tabNow}/>
+          <div className="donut">
+          <div class="hole">
+            {
+              
+            }
+          </div>
           </div>
         </div>
       </main>
