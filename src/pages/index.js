@@ -57,12 +57,21 @@ export default function Home() {
             setTototalExpense={setTototalExpense}
             setGraphData={setGraphData}
           />
-          <div className="donut">
+          <div className="donut"
+           style={{
+            background: `conic-gradient(
+              #141197 0% 25%,
+              #9d9bf4 25% 50%,
+              #4fd18b 50% 75%,
+              #4c49ed 75% 100%
+            )`,
+          }}
+          >
             <div className="hole">
               <h2>
                 ${totalExpense}.<span>00</span>
               </h2>
-              {}
+          
             </div>
           </div>
 
