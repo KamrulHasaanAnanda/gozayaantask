@@ -92,19 +92,40 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
-    
+
       background: conic-gradient(
         #141197 0% 25%,
-        #4C49ED 25% 50%,
-        #4FD18B 50% 75%,
-        #9D9BF4 75% 100%
+        #4c49ed 25% 50%,
+        #4fd18b 50% 75%,
+        #9d9bf4 75% 100%
       );
 
       .hole {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          color: #111;
+
+          font-family: Roboto;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        span {
+          color: #afadfe;
+          /* Balance/Tenth */
+          font-family: Inter;
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+        }
       }
     }
   }
